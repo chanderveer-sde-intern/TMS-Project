@@ -1,0 +1,24 @@
+Python cache files
+
+pycache/
+*.py[cod]
+*$py.class
+
+Virtual environments
+
+venv/
+.venv/
+env/
+
+Environment variables and secrets
+
+.env
+.env.*
+!.env.example
+
+Django files
+
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
