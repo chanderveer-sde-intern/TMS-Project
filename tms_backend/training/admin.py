@@ -31,8 +31,7 @@ class TaskAdmin(admin.ModelAdmin):
 
     list_filter = (
         'status',
-        'due_date',
-    )
+        )
 
 
 @admin.register(Submission)

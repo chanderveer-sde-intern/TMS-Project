@@ -35,6 +35,12 @@ class Profile(models.Model):
 
 class Task(models.Model):
 
+    STATUS_CHOICES=[
+        ('assigned','Assigned'),
+        ('in progress','In Progress'),
+        ('completed','Completed')
+        ]
+
     intern = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
@@ -49,7 +55,8 @@ class Task(models.Model):
 
     status = models.CharField(
         max_length=20,
-        default='assigned'
+        default='assigned',
+        choices=STATUS_CHOICES
     )
 
     created_at = models.DateTimeField(auto_now_add=True)
